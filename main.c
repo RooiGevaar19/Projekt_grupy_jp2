@@ -19,7 +19,19 @@ int main()
 	switch (command)
 	{
 		1 : {
-		//
+		// szesciokat
+		}
+		2 : {
+                // trojkat
+                }
+		3 : {
+                // prostokat
+                }
+		4 : {
+                // trapez
+                }
+		default : {
+			printf("\nFATAL ERROR ! XD\n");
 		}
 	}	
 	return 0;
