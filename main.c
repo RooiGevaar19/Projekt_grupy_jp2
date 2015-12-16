@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 
-int szesciokat_foremny(int a);
-int trojkat(int a, int h);
-int prostokat(int a, int b);
-int trapez (int a, int b, int h);
+float szesciokat_foremny(float a);
+float trojkat(float a, float h);
+float prostokat(float a, float b);
+float trapez (float a, float b, float h);
 
 int main()
 {
@@ -15,19 +15,23 @@ int main()
 	printf("\n2 - trojkata ?");
 	printf("\n3 - prostokata ?");
 	printf("\n4 - trapezu ?\n");
-	scanf("%d", command);
+	scanf("%d", &command);
 	switch (command)
 	{
-		1 : {
-		// szesciokat
+		case 1 : {
+			float a;
+			printf("\nPodaj dlugosc boku szesciokata: ");
+			scanf("%f", &a);
+			printf("Pole wynosi %f.\n", szesciokat_foremny(a));
+			break;
 		}
-		2 : {
+		case 2 : {
                 // trojkat
                 }
-		3 : {
+		case 3 : {
                 // prostokat
                 }
-		4 : {
+		case 4 : {
                 // trapez
                 }
 		default : {
@@ -37,3 +41,7 @@ int main()
 	return 0;
 }
 
+float szesciokat_foremny(float a)
+{
+	return 1.5*a*a*sqrt(3);
+}
