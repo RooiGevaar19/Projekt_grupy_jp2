@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 
-int szesciokat_foremny(int a);
-int trojkat(int a, int h);
-int prostokat(int a, int b);
-int trapez (int a, int b, int h);
+float szesciokat_foremny(float a);
+float trojkat(float a, float h);
+float prostokat(float a, float b);
+float trapez (float a, float b, float h);
 
 int main()
 {
@@ -28,12 +28,22 @@ int main()
                 // prostokat
                 }
 		4 : {
-                // trapez
-                }
+		float a,b,h;
+                printf("Podaj 1 bok trapeza\n")
+		scanf("%f",a)
+		printf("Podaj 2 bok trapeza\n")
+		scanf("%f",b)
+		printf("Podaj wysokosc trapeza\n")
+		scanf("%f",c)
+		printf("Pole trapezu wynosi %f\n", trapez(a,b,h))
+		break;
+ }
 		default : {
 			printf("\nFATAL ERROR ! XD\n");
 		}
 	}	
 	return 0;
 }
-
+float trapez(float a, float b, float h){
+return (a+b)*2/h
+}
